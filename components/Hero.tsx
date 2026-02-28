@@ -7,9 +7,9 @@ const Hero = () => {
   const { scrollY } = useScroll();
 
   // Wipe logic: 100% (hidden) to 0% (fully revealed)
-  const wipeValue = useTransform(scrollY, [0, 600], [100, -500]);
+  const wipeValue = useTransform(scrollY, [0, 600], [100, 0]);
   const imgScale = useTransform(scrollY, [0, 800], [1, 1.15]);
-  const textY = useTransform(scrollY, [0, 100], [0, -40]);
+  const textY = useTransform(scrollY, [0, 600], [0, -40]);
 
   const headlineClass =
     "text-[12vw] md:text-[9.5rem] font-black leading-[0.8] tracking-tighter flex flex-col uppercase select-none";

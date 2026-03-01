@@ -16,6 +16,7 @@ const Hero = () => {
 
   return (
     <section
+      id="hero"
       ref={containerRef}
       className="relative h-[100vh] bg-zinc-950 overflow-hidden"
     >
@@ -105,7 +106,15 @@ const Hero = () => {
               // style={{ opacity: useTransform(scrollY, [0, 400], [0.3, 1]) }}
               className="flex flex-wrap gap-6 items-center pointer-events-auto"
             >
-              <button className="px-10 py-5 bg-amber-500 text-slate-900 font-black uppercase tracking-widest text-xs flex items-center gap-4 group hover:bg-white transition-all rounded-full shadow-2xl">
+              <button
+                onClick={() => {
+                  window.scrollTo({
+                    top: document.getElementById("contact")?.offsetTop,
+                    behavior: "smooth",
+                  });
+                }}
+                className="px-10 py-5 bg-amber-500 text-slate-900 font-black uppercase tracking-widest text-xs flex items-center gap-4 group hover:bg-white transition-all rounded-full shadow-2xl"
+              >
                 Get Quote{" "}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
               </button>

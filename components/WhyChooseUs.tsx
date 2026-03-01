@@ -111,7 +111,7 @@ const StructuralPanel = ({
                 (e.target as HTMLImageElement).src = fallbackImage;
               }}
             />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           </div>
 
           <motion.div
@@ -207,6 +207,7 @@ const WhyChooseUs = () => {
     <section
       ref={containerRef}
       onMouseMove={handleMouseMove}
+      id="why-choose-us"
       className="py-40 bg-white relative overflow-hidden"
     >
       <div
@@ -232,7 +233,8 @@ const WhyChooseUs = () => {
             />
           </div>
           <div className="md:w-1/3 text-slate-500 font-mono text-[10px] leading-loose uppercase tracking-[0.2em] pt-4">
-            Licensed, insured, and dedicated to clear communication from your first call to your final walkthrough.
+            Licensed, insured, and dedicated to clear communication from your
+            first call to your final walkthrough.
           </div>
         </div>
 
